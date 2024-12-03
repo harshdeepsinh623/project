@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max and Min</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .result {
+            font-size: 26px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+
+        .value {
+            font-size: 25px;
+            color: red;
+            margin: 30px 0;
+            font-weight: normal;
+            justify-content: space-around;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div id="head" class="value"></div>
+        <div id="result" class="result"></div> 
+    </div>
+
+    <script>
+
+        let number = parseInt(prompt("Enter the no1"));
+
+        document.getElementById("head").innerHTML = "number: " + number;
+
+        let checkvalue;
+        if (number>0) {
+            checkvalue = "This is a Positive Value";
+        } 
+        else if (number<0) {
+            checkvalue = "This is a Negative Value";
+        } 
+        else {
+            checkvalue = "This is a Zero value";
+        }
+
+        document.getElementById("result").innerHTML = checkvalue;
+
+    </script>
+    
+</body>
+</html>
